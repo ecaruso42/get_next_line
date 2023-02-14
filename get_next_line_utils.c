@@ -6,7 +6,18 @@
 /*   By: ecaruso <ecaruso@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 16:03:42 by ecaruso           #+#    #+#             */
-/*   Updated: 2023/02/13 16:03:43 by ecaruso          ###   ########.fr       */
+/*   Updated: 2023/02/14 16:04:46 by ecaruso          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "get_next_line.h"
+
+size_t	ft_strlen(const char *str)
+{
+	int	i;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
