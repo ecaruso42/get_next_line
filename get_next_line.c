@@ -6,8 +6,13 @@
 /*   By: ecaruso <ecaruso@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 16:02:45 by ecaruso           #+#    #+#             */
-/*   Updated: 2023/02/13 17:25:52 by ecaruso          ###   ########.fr       */
+/*   Updated: 2023/02/15 16:39:35 by ecaruso          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "get_next_line.h"
+
 char	*get_next_line(int fd)
+{
+
+}
