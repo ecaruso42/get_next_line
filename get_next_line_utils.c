@@ -6,7 +6,7 @@
 /*   By: ecaruso <ecaruso@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 16:03:42 by ecaruso           #+#    #+#             */
-/*   Updated: 2023/02/16 17:33:49 by ecaruso          ###   ########.fr       */
+/*   Updated: 2023/02/20 16:52:24 by ecaruso          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ size_t	ft_strlen(const char *str)
 {
 	int	i;
 
+	i = 0;
 	while (str[i] != '\0')
 	{
 		i++;
@@ -54,6 +55,9 @@ char	*ft_strjoin(char *backup, char *buff)
 	}
 	if (!backup || !buff)
 		return (NULL);
+	str = malloc(sizeof(char) * ((ft_strlen(backup) + ft_strlen(buff)) + 1));
+	if (str == NULL)
+		return (NULL);
 	i = -1;
 	j = 0;
 	if (backup)
@@ -71,9 +75,10 @@ char	*ft_get_line(char *backup)
 	int		i;
 	char	*str;
 
+	i = 0;
 	if (!backup[i])
 		return (NULL);
-	while (!backup[i] && backup[i] != '\n')
+	while (backup[i] && backup[i] != '\n')
 		i++;
 	str = (char *)malloc(sizeof(char) * (i + 2));
 	if (!str)
@@ -113,7 +118,7 @@ char	*ft_backup(char *backup)
 	i++;
 	j = 0;
 	while (backup[i])
-		str[j++] = backup [i++];
+		str[j++] = backup[i++];
 	str[j] = '\0';
 	free(backup);
 	return (str);
